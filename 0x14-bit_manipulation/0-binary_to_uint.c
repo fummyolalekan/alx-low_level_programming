@@ -9,18 +9,16 @@
 
 unsigned int binary_to_uint(const char *b)
 {
-	unsigned int value = 0;
+	int i;
+	unsigned int decimal_val = 0;
 
-	if (b == NULL)
+	if (!b)
 		return (0);
-	while (*b != '\0')
+	for (i = 0; b[i]; i++)
 	{
-		value = value << 1;
-		if (*b != '1' && *b != '0')
+		if (b[i] < '0' || b[i] > '1')
 			return (0);
-		else if (*b == '1')
-			value = value | 1;
-		b++;
+		decimal_val = 2 * decimal_val + (b[i] - '0');
 	}
-	return (value);
+	return (decimal_val);
 }
