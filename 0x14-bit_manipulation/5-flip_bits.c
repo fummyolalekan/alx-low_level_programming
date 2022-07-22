@@ -2,7 +2,7 @@
 
 /**
  * flip_bits - number of bits you would need to flip
- * 		to get from one number to another
+ * to get from one number to another
  * @n: is the parameter
  * @m: is the destiny
  * Return: number of bits
